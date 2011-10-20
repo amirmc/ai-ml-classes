@@ -1,0 +1,1 @@
+This is where I plan to put all my code (however little) related to the Stanford Online AI and ML classes.  Hoping that I can also put any ovate code in here but we'll see.
