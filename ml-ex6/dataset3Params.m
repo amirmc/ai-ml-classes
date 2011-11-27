@@ -23,11 +23,9 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
-
-
-
-
-
+% Look at the code in dataset3Params_test.m to see how I worked these out
+C = 1;
+sigma = 0.1;
 
 % =========================================================================
 
