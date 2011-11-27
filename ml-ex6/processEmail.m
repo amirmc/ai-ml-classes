@@ -96,15 +96,14 @@ while ~isempty(email_contents)
     % Note: You can use strcmp(str1, str2) to compare two strings (str1 and
     %       str2). It will return 1 only if the two strings are equivalent.
     %
-
-
-
-
-
-
-
-
-
+	
+%	wrdIndex = find(vocabList == str);  <- This doesn't work on non-matrices
+	for index=1:length(vocabList);
+		if (strcmp(str, vocabList{index}))
+			word_indices = [word_indices ; index];
+			break;
+		end
+	endfor
 
     % =============================================================
 
