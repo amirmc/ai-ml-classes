@@ -21,11 +21,14 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
-
-
-
-
+for m_iter=1:rows(X)
+	k_values = zeros(1,K);
+	for k_iter=1:K
+		k_values(1, k_iter) = sumsq(X(m_iter,:) - centroids(k_iter,:));
+	endfor
+	[min_k, index_min] = min(k_values);
+	idx(m_iter, 1) = index_min;
+endfor
 
 % =============================================================
 
