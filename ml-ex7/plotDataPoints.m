@@ -9,6 +9,7 @@ palette = hsv(K + 1);
 colors = palette(idx, :);
 
 % Plot the data
-scatter(X(:,1), X(:,2), 15, colors);
+%scatter(X(:,1), X(:,2), 15, colors); % This line causes error on Mac (bug in Octave)
+colormap(jet); scatter(X(:,1), X(:,2), 15, idx); % This replaces the above line (to patch a bug)
 
 end
