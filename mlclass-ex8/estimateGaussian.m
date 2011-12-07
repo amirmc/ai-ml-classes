@@ -22,7 +22,7 @@ sigma2 = zeros(n, 1);
 %
 
 mu = mean(X);
-sigma2 = var(X);
+sigma2 = ((m-1)/m) * var(X); % the first term is a fudge since var(x) divides by m-1
 
 % =============================================================
 
