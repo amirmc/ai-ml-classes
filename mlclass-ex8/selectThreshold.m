@@ -25,7 +25,7 @@ for epsilon = min(pval):stepsize:max(pval)
 	
 	cvPredictions = (pval < epsilon);	% predictions based on epsilon
 	
-	tp = sum( (cvPredictions==0) & (yval==0) );	% number of true positives
+	tp = sum( (cvPredictions==1) & (yval==1) );	% number of true positives
 	fp = sum( (cvPredictions==1) & (yval==0) );	% number of false positives
 	fn = sum( (cvPredictions==0) & (yval==1) );	% number of false negatives
 	
