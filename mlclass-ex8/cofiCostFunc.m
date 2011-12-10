@@ -41,7 +41,8 @@ Theta_grad = zeros(size(Theta));
 %
 
 h_err = (X * Theta' - Y).*R;	% The '.*R' excludes data with no rating
-J = 0.5 * sum(sum( h_err.^2 ));
+J_reg = (lambda/2) * ( sum(sum(Theta.^2)) + sum(sum(X.^2)) );	% Regularisation terms
+J = 0.5 * sum(sum( h_err.^2 )) + J_reg;
 
 X_grad = (h_err * Theta);
 Theta_grad = (h_err' * X);
